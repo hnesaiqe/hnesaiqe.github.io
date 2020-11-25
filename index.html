@@ -7,6 +7,7 @@
     <title>Mon CV</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,42 @@
         <p>Permis B</p>
     </div>
     <div class="comp_div">
-        <div class="competences"></div>
+        <div class="competences">
+            <div class="menu">
+                <input type="checkbox" id="toggle">
+                <label id="show-menu" for="toggle">
+                    <div class="btn_1">
+                        <img src="icones/brain.webp" alt="brain" class="material-icons md-36 toggleBtn menuBtn">
+                        <img src="icones/ete_exit_logout_remove_x_icon_123217.webp" alt="exit" class="material-icons md-36 toggleBtn closeBtn">
+                    </div>
+
+                    <div class="btn_1">
+                        <img src="icones/Autocad_23637.webp" alt="autocad" class="material-icons md-36" title="Autocad">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/Revit_23612.webp" alt="revit" class="material-icons md-36" title="Revit">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/rafagagooglesketchup_11285.webp" alt="sketchup" class="material-icons md-36" title="Sketchup">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/Office_2013_23572.webp" alt="pack_office" class="material-icons md-36" title="Pack Office">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/file_type_css_icon_130661.webp" alt="css" class="material-icons md-36" title="CSS">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/file_type_html_icon_130541.webp" alt="html" class="material-icons md-36" title="HTML">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/file_type_js_official_icon_130509.webp" alt="js" class="material-icons md-36" title="Javascript">
+                    </div>
+                    <div class="btn_1">
+                        <img src="icones/file_type_python_icon_130221.webp" alt="python" class="material-icons md-36" title="Python">
+                    </div>
+                </label>
+            </div>
+        </div>
         <div class="divers"></div>
     </div>
 
@@ -34,8 +70,8 @@
         <div class="alternant">
             <div class="description">
                 <div class="formAlter">
-                    <h3>2020</h3>
-                    <div class="detail">
+                    <h3 class="dateShowJs">2020</h3>
+                    <div class="detail dateShowJsHidden" >
                         <h4> CCI Formation en alternance / Entreprise Iaai-Events</h4>
                         <p>Alternant Développeur Web</p>
                         <p>3 mois</p>
@@ -43,7 +79,7 @@
                     </div>
                 </div>
                 <div class="srcl">
-                    <div class="detail">
+                    <div class="detail dateShowJsHidden">
                     <h4>Sorocal</h4>
                     <p>Opérateur machine</p>
                     <p>4 ans et 6 mois</p>
@@ -56,7 +92,7 @@
         <!-- 2015 -->
         <div class="garonne">
             <div class="vide" id="vide"></div>
-            <div class="vide_middle" id="vide_middle"></div>
+            <div class="vide_middle" id="vide_middle">trais</div>
             <div class="description">
                 <h3>2015</h3>
                     <div class="detail">
@@ -150,7 +186,15 @@
           } else {
             navbar.classList.remove("sticky");
           }
-        }</script>
+        }
+        
+
+    $( ".dateShowJs" ).click(function() {
+        $( ".dateShowJsHidden" ).toggle( "slow" );
+    });
+
+        
+        </script>
     <script type="text/javascript">window.onload = date_heure('date_heure');</script>
 </body>
 

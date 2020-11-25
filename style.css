@@ -88,3 +88,6 @@ body {
    width: 20%;
  }
 
+  .dateShowJsHidden{
+    display: none;
+  }
