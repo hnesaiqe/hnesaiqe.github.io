@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="id-photo.jpg" alt="id-photo">
+        <p>HNE Saiqë , Willy</p>
+        <p>35 ans - marié</p>
+        <p>Permis B</p>
+    </div>
+    <div class="comp_div">
+        <div class="competences"></div>
+        <div class="divers"></div>
+    </div>
+
+    <div id="navbar">
+        <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
+        <a href="#formation">FORMATIONS ET DIPLÔMES</a>
+        <span id="date_heure"></span>
+    </div>
+
+    <!-- Expériences -->
+    <div class="experience content" id="experience">
+        <!-- 2020 -->
+        <th>EXPÉRIENCES PROFESSIONNELLES</th>
+        <div class="alternant">
+            <div class="description">
+                <div class="formAlter">
+                    <h3>2020</h3>
+                    <div class="detail">
+                        <h4> CCI Formation en alternance / Entreprise Iaai-Events</h4>
+                        <p>Alternant Développeur Web</p>
+                        <p>3 mois</p>
+                        <p>Développeur Web et application Mobile</p>
+                    </div>
+                </div>
+                <div class="srcl">
+                    <div class="detail">
+                    <h4>Sorocal</h4>
+                    <p>Opérateur machine</p>
+                    <p>4 ans et 6 mois</p>
+                    <p>Rotomoulage, préparation et équipement des ouvrages d’assainissement, préparation et chargement
+                        des
+                        commandes, maintenance et contrôle qualité de l’ouvrage</p>
+                    </div>
+            </div>
+        </div>
+        <!-- 2015 -->
+        <div class="garonne">
+            <div class="vide" id="vide"></div>
+            <div class="vide_middle" id="vide_middle"></div>
+            <div class="description">
+                <h3>2015</h3>
+                    <div class="detail">
+                    <h4>Garonne Aluminium</h4>
+                    <p>Opérateur machine</p>
+                    <p>8 mois (dont 2 ½ mois d’intérim avec Manpower NC)</p>
+                    <p>Débiter, usiner, fabriquer, travailler sur un centre d'usinage et pose</p>
+                    </div>
+            </div>
+        </div>
+        <!-- 2008 -->
+        <div class="alustyl">
+            <div class="description">
+                <h3>2008</h3>
+                    <div class="detail">
+                    <h4>Alustyl</h4>
+                    <p>Opérateur machine (OHQ)</p>
+                    <p>7 ans et 3 mois</p>
+                    <p>Préparation fiche de fabrication, débiter, usiner, fabriquer, travailler sur un centre d'usinage,
+                        pose et accompagnement d’une équipe</p>
+                    </div>    
+            </div>
+        </div>
+        <!-- 2007 -->
+        <div class="cvf">
+            <div class="description">
+                    <h3>2007</h3>
+                <div class="alConcept">
+                    <div class="detail">
+                    <h4>Aluminium Concept</h4>
+                    <p>Opérateur machine</p>
+                    <p>1 ans et 5 mois</p>
+                    <p>Préparation fiche de fabrication, débiter, usiner, fabriquer, travailler sur un centre d'usinage,
+                        pose et accompagnement d’une équipe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Formation et Diplôme -->
+    <th>FORMATIONS ET DIPLÔMES</th>
+
+    <div class="form_dip">
+        <div class="formation" id="formation">            
+            <div class="description">
+                <div class="cci">
+                    <h3>2020</h3>
+                    <h4>CCI Formation</h4>
+                    <p>Developpeur Web et application Mobile</p>
+                </div>
+                <div class="cnam">
+                    <h4>CNAM, Nouméa</h4>
+                    <p>2ème année – Certificat professionnel Technicien de maintenance micro-réseaux et internet
+                        spécialisation cybersécurité des PME</p>
+                </div>
+            </div>        
+            <div class="description">
+                <div class="bac">
+                    <h3>2004</h3>        
+                    <h4>Lycée Pétro Attiti, Nouméa</h4>
+                    <p>Baccalauréat Professionnel Construction Aménagement Bâtiment</p>
+                </div>
+            </div>
+            
+            <div class="description">
+                <div class="bep_cap">
+                    <h3>2002</h3>
+                    <h4>Lycée Pétro Attiti, Nouméa</h4>
+                    <p>BEP Bois & Matériaux associés / CAP Menuiserie</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!-- Compétences -->
+        <div class="comp">
+        </div>
+        <!-- Divers -->
+        <div class="divers">
+        </div>
+    </div>
+    <script>
+    window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }</script>
+    <script type="text/javascript">window.onload = date_heure('date_heure');</script>
+</body>
+
+</html>
