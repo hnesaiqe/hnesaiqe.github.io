@@ -78,7 +78,7 @@ body {
     background-color: white;
   }
   
- .garonne, .alternant, .alustyl {
+ .garonne, .alternant, .alustyl, .alConcept, .cvf {
     display: flex;
  }
  /* .srcl {
