@@ -78,9 +78,13 @@ body {
     background-color: white;
   }
   
- .garonne {
-   display: flex;
+ .garonne, .alternant {
+    display: flex;
  }
+ /* .srcl {
+    display: flex;
+
+ } */
   .vide{
     width: 40%;
  }
