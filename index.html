@@ -18,8 +18,10 @@
         animation: taileDate 1s infinite;
     }
 
+
     .descriptionGauche {
         border-right: 1px solid gray;
+
     }
 
     .descriptionDroite {
@@ -41,6 +43,7 @@
 
     .vide_middle {
         border-bottom: 1px solid gray;
+        box-shadow: 2%;
     }
 
     @keyframes taileDate {
@@ -176,7 +179,7 @@
                     <div class="description descriptionGauche">
                         <div class="formAlter">
                             <div>
-                                <h3 class="dateShowJs displayAnim">2020</h3>
+                                <h3 class="dateShowJs2020 displayAnim">2020</h3>
                                 <button style="display: none; text-align: center;" class="deletteCards">X</button>
                             </div>
                             <div class="detail dateShowJsHidden">
@@ -206,12 +209,15 @@
                     <div class="vide" id="vide"></div>
                     <div class="vide_middle" id="vide_middle">trait</div>
                     <div class="description descriptionDroite">
-                        <h3>2015</h3>
-                        <div class="detail">
-                            <h4>Garonne Aluminium</h4>
-                            <p>Opérateur machine</p>
-                            <p>8 mois (dont 2 ½ mois d’intérim avec Manpower NC)</p>
-                            <p>Débiter, usiner, fabriquer, travailler sur un centre d'usinage et pose</p>
+                        <h3 class="dateShowJs2015 ">2015</h3>
+                        <button style="display: none; text-align: center;" class="deletteCards2015">X</button>
+                        <div class="displayAnim2015">
+                            <div class="detail dateShowJsHidden2015">
+                                <h4>Garonne Aluminium</h4>
+                                <p>Opérateur machine</p>
+                                <p>8 mois (dont 2 ½ mois d’intérim avec Manpower NC)</p>
+                                <p>Débiter, usiner, fabriquer, travailler sur un centre d'usinage et pose</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -311,15 +317,29 @@
             }
 
 
-            $(".dateShowJs").click(function () {
+            $(".dateShowJs2020").click(function () {
                 $(".dateShowJsHidden").toggle("slow");
-                $(".dateShowJs").hide();
+                $(".dateShowJs2020").hide();
                 $(".deletteCards").show();
             });
             $(".deletteCards").click(function () {
                 $(".dateShowJsHidden").toggle("slow");
                 $(".deletteCards").hide();
-                $(".dateShowJs").show();
+                $(".dateShowJs2020").show();
+            });
+
+
+            $(".dateShowJs2015").click(function () {
+                $(".dateShowJsHidden2015").toggle("slow");
+                $(".dateShowJs2015").hide();
+                $(".deletteCards2015").show();
+                $(".displayAnim").css("animation-play-state", "paused");
+            });
+            $(".deletteCards2015").click(function () {
+                $(".dateShowJsHidden2015").toggle("slow");
+                $(".deletteCards2015").hide();
+                $(".dateShowJs2015").show();
+                $(".displayAnim").css("animation-play-state", "running");
             });
 
 
