@@ -18,13 +18,29 @@
         animation: taileDate 1s infinite;
     }
 
+    .descriptionGauche {
+        border-right: 1px solid gray;
+    }
+
+    .descriptionDroite {
+        border-left: 1px solid gray;
+    }
+
     .naveDate {
+        width: 50%;
+    }
+
+    .naveLien {
         width: 50%;
     }
 
     .navebaretop {
         display: flex;
-        width: 50%;
+        width: 100%;
+    }
+
+    .vide_middle {
+        border-bottom: 1px solid gray;
     }
 
     @keyframes taileDate {
@@ -141,7 +157,7 @@
     <div>
         <div id="navbar">
             <div class="navebaretop">
-                <div style="display: flex;">
+                <div style="display: flex;" class="naveLien">
                     <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
                     <a href="#formation">FORMATIONS ET DIPLÔMES</a>
                 </div>
@@ -157,7 +173,7 @@
             <h2 class="titreH2">EXPÉRIENCES PROFESSIONNELLES</h2>
             <div class="exp_pro">
                 <div class="alternant">
-                    <div class="description">
+                    <div class="description descriptionGauche">
                         <div class="formAlter">
                             <div>
                                 <h3 class="dateShowJs displayAnim">2020</h3>
@@ -189,7 +205,7 @@
                 <div class="garonne">
                     <div class="vide" id="vide"></div>
                     <div class="vide_middle" id="vide_middle">trait</div>
-                    <div class="description">
+                    <div class="description descriptionDroite">
                         <h3>2015</h3>
                         <div class="detail">
                             <h4>Garonne Aluminium</h4>
@@ -201,7 +217,7 @@
                 </div>
                 <!-- 2008 -->
                 <div class="alustyl">
-                    <div class="description">
+                    <div class="description descriptionGauche">
                         <h3>2008</h3>
                         <div class="detail">
                             <h4>Alustyl</h4>
@@ -219,7 +235,7 @@
                 <div class="cvf">
                     <div class="vide" id="vide"></div>
                     <div class="vide_middle" id="vide_middle">trait</div>
-                    <div class="description">
+                    <div class="description descriptionDroite">
                         <h3>2007</h3>
                         <div class="alConcept">
                             <div class="detail">
@@ -236,7 +252,7 @@
                 </div>
             </div>
             <!-- Formation et Diplôme -->
-            <th>FORMATIONS ET DIPLÔMES</th>
+            <h2>FORMATIONS ET DIPLÔMES</h2>
 
             <div class="form_dip">
                 <div class="formation" id="formation">
@@ -306,10 +322,6 @@
                 $(".dateShowJs").show();
             });
 
-            // $(".displayAnim").click(function () {
-            //     $(".dateShowJs").toggle("slow");
-            //     $(".dateShowJs").show();
-            // });
 
             $(document).ready(function () {
                 $(".play-animation").click(function () {
