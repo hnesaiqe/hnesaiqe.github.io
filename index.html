@@ -18,6 +18,10 @@
         animation: taileDate 1s infinite;
     }
 
+    .navebaretop {
+        display: flex;
+    }
+
     @keyframes taileDate {
         50% {
             font-size: 0.95em;
@@ -84,6 +88,15 @@
             width: 100%;
             text-align: center;
         }
+
+        .navebaretop {
+            display: block;
+        }
+
+        .naveDate {
+            width: 100%;
+            text-align: center;
+        }
     }
 </style>
 
@@ -121,12 +134,14 @@
     </div>
     <div>
         <div id="navbar">
-            <div style="display: flex;">
-                <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
-                <a href="#formation">FORMATIONS ET DIPLÔMES</a>
-            </div>
-            <div>
-                <span id="date_heure"></span>
+            <div class="navebaretop">
+                <div style="display: flex;">
+                    <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
+                    <a href="#formation">FORMATIONS ET DIPLÔMES</a>
+                </div>
+                <div class="naveDate">
+                    <span id="date_heure"></span>
+                </div>
             </div>
         </div>
 
