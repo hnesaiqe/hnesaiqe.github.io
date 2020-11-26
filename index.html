@@ -4,11 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Mon CV</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+    .displayAnim {
+        animation: taileDate 1s infinite;
+    }
+
+    @keyframes taileDate {
+        50% {
+            font-size: 0.95em;
+        }
+
+        100% {
+            font-size: 0.87em;
+        }
+    }
+
+    @media only screen and (max-width: 280px) {
+        .header {
+            height: auto;
+        }
+
+        .parrent {
+            display: block;
+            width: 100%;
+        }
+
+        .divers {
+            width: 100%;
+        }
+
+        .slider {
+            padding: 0;
+        }
+
+        .titreH2 {
+            font-size: large;
+        }
+
+        .vide_middle {
+            display: none;
+        }
+
+        #navbar a {
+            font-size: 11px;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slide {
+            width: 100%;
+        }
+
+        #date_heure {
+            font-size: 14px;
+            margin-left: 0%;
+        }
+
+        .vide {
+            display: none;
+        }
+
+        .experience {
+            text-align: -webkit-center;
+        }
+
+        .description {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
 
 <body>
     <div class="header">
@@ -16,206 +92,215 @@
         <p>HNE Saiqë , Willy</p>
         <p>35 ans - marié</p>
         <p>Permis B</p>
-    </div>
-    <div class="comp_div">
-        <!-- <div class="competences">
-            <div class="menu">
-                <input type="checkbox" id="toggle">
-                <label id="show-menu" for="toggle">
-                    <div class="btn_1">
-                        <img src="icones/brain.webp" alt="brain" class="material-icons md-36 toggleBtn menuBtn">
-                        <img src="icones/ete_exit_logout_remove_x_icon_123217.webp" alt="exit"
-                            class="material-icons md-36 toggleBtn closeBtn">
+        <div class="parrent">
+            <div class="divers">
+                <div class="slider">
+                    <div class="slide"><img
+                            src="https://dl.dropboxusercontent.com/u/50037593/ElasticSlider/images/1.jpg" />
+                        <p>JADORE VOYAGER MAIS PAS QUE ...</p>
                     </div>
-
-                    <div class="btn_1">
-                        <img src="icones/Autocad_23637.webp" alt="autocad" class="material-icons md-36" title="Autocad">
+                    <div class="slide"><img
+                            src="https://dl.dropboxusercontent.com/u/50037593/ElasticSlider/images/3.jpg" />
+                        <p>JADORE VOYAGER MAIS PAS QUE ...</p>
                     </div>
-                    <div class="btn_1">
-                        <img src="icones/Revit_23612.webp" alt="revit" class="material-icons md-36" title="Revit">
+                    <div class="slide"><img
+                            src="https://dl.dropboxusercontent.com/u/50037593/ElasticSlider/images/2.jpg" />
+                        <p>JADORE VOYAGER MAIS PAS QUE ...</p>
                     </div>
-                    <div class="btn_1">
-                        <img src="icones/rafagagooglesketchup_11285.webp" alt="sketchup" class="material-icons md-36"
-                            title="Sketchup">
+                    <div class="slide"><img
+                            src="https://dl.dropboxusercontent.com/u/50037593/ElasticSlider/images/4.jpg" />
+                        <p>JADORE VOYAGER MAIS PAS QUE ...</p>
                     </div>
-                    <div class="btn_1">
-                        <img src="icones/Office_2013_23572.webp" alt="pack_office" class="material-icons md-36"
-                            title="Pack Office">
-                    </div>
-                    <div class="btn_1">
-                        <img src="icones/file_type_css_icon_130661.webp" alt="css" class="material-icons md-36"
-                            title="CSS">
-                    </div>
-                    <div class="btn_1">
-                        <img src="icones/file_type_html_icon_130541.webp" alt="html" class="material-icons md-36"
-                            title="HTML">
-                    </div>
-                    <div class="btn_1">
-                        <img src="icones/file_type_js_official_icon_130509.webp" alt="js" class="material-icons md-36"
-                            title="Javascript">
-                    </div>
-                    <div class="btn_1">
-                        <img src="icones/file_type_python_icon_130221.webp" alt="python" class="material-icons md-36"
-                            title="Python">
-                    </div>
-                </label>
+                </div>
             </div>
-        </div> -->
-        <div class="divers"></div>
+            <div class="divers">
+                <h2>A TOI DE JOUER</h2>
+            </div>
+        </div>
     </div>
+    <div>
+        <div id="navbar">
+            <div style="display: flex;">
+                <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
+                <a href="#formation">FORMATIONS ET DIPLÔMES</a>
+            </div>
+            <div>
+                <span id="date_heure"></span>
+            </div>
+        </div>
 
-    <div id="navbar">
-        <a href="#experience">EXPÉRIENCES PROFESSIONNELLES</a>
-        <a href="#formation">FORMATIONS ET DIPLÔMES</a>
-        <span id="date_heure"></span>
-    </div>
-
-    <!-- Expériences -->
-    <div class="experience content" id="experience">
-        <!-- 2020 -->
-        <th>EXPÉRIENCES PROFESSIONNELLES</th>
-        <div class="exp_pro">
-            <div class="alternant">
-                <div class="description">
-                    <div class="formAlter">
-                        <h3 class="dateShowJs">2020</h3>
-                        <div class="detail dateShowJsHidden">
-                            <h4> CCI Formation en alternance / Entreprise Iaai-Events</h4>
-                            <p>Alternant Développeur Web</p>
-                            <p>3 mois</p>
-                            <p>Développeur Web et application Mobile</p>
+        <!-- Expériences -->
+        <div class="experience content" id="experience">
+            <!-- 2020 -->
+            <h2 class="titreH2">EXPÉRIENCES PROFESSIONNELLES</h2>
+            <div class="exp_pro">
+                <div class="alternant">
+                    <div class="description">
+                        <div class="formAlter">
+                            <div>
+                                <h3 class="dateShowJs displayAnim">2020</h3>
+                                <button style="display: none; text-align: center;" class="deletteCards">X</button>
+                            </div>
+                            <div class="detail dateShowJsHidden">
+                                <h4> CCI Formation en alternance / Entreprise Iaai-Events</h4>
+                                <p>Alternant Développeur Web</p>
+                                <p>3 mois</p>
+                                <p>Développeur Web et application Mobile</p>
+                            </div>
+                        </div>
+                        <div class="srcl">
+                            <div class="detail dateShowJsHidden">
+                                <h4>Sorocal</h4>
+                                <p>Opérateur machine</p>
+                                <p>4 ans et 6 mois</p>
+                                <p>Rotomoulage, préparation et équipement des ouvrages d’assainissement, préparation et
+                                    chargement
+                                    des
+                                    commandes, maintenance et contrôle qualité de l’ouvrage</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="srcl">
-                        <div class="detail dateShowJsHidden">
-                            <h4>Sorocal</h4>
-                            <p>Opérateur machine</p>
-                            <p>4 ans et 6 mois</p>
-                            <p>Rotomoulage, préparation et équipement des ouvrages d’assainissement, préparation et
-                                chargement
-                                des
-                                commandes, maintenance et contrôle qualité de l’ouvrage</p>
-                        </div>
-                    </div>
+                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="vide" id="vide"></div>
                 </div>
-                <div class="vide_middle" id="vide_middle">trait</div>
-                <div class="vide" id="vide"></div>
-            </div>
-            <!-- 2015 -->
-            <div class="garonne">
-                <div class="vide" id="vide"></div>
-                <div class="vide_middle" id="vide_middle">trait</div>
-                <div class="description">
-                    <h3>2015</h3>
-                    <div class="detail">
-                        <h4>Garonne Aluminium</h4>
-                        <p>Opérateur machine</p>
-                        <p>8 mois (dont 2 ½ mois d’intérim avec Manpower NC)</p>
-                        <p>Débiter, usiner, fabriquer, travailler sur un centre d'usinage et pose</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 2008 -->
-            <div class="alustyl">
-                <div class="description">
-                    <h3>2008</h3>
-                    <div class="detail">
-                        <h4>Alustyl</h4>
-                        <p>Opérateur machine (OHQ)</p>
-                        <p>7 ans et 3 mois</p>
-                        <p>Préparation fiche de fabrication, débiter, usiner, fabriquer, travailler sur un centre
-                            d'usinage,
-                            pose et accompagnement d’une équipe</p>
-                    </div>
-                </div>
-                <div class="vide_middle" id="vide_middle">trait</div>
-                <div class="vide" id="vide"></div>
-            </div>
-            <!-- 2007 -->
-            <div class="cvf">
-                <div class="vide" id="vide"></div>
-                <div class="vide_middle" id="vide_middle">trait</div>
-                <div class="description">
-                    <h3>2007</h3>
-                    <div class="alConcept">
+                <!-- 2015 -->
+                <div class="garonne">
+                    <div class="vide" id="vide"></div>
+                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="description">
+                        <h3>2015</h3>
                         <div class="detail">
-                            <h4>Aluminium Concept</h4>
+                            <h4>Garonne Aluminium</h4>
                             <p>Opérateur machine</p>
-                            <p>1 ans et 5 mois</p>
+                            <p>8 mois (dont 2 ½ mois d’intérim avec Manpower NC)</p>
+                            <p>Débiter, usiner, fabriquer, travailler sur un centre d'usinage et pose</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2008 -->
+                <div class="alustyl">
+                    <div class="description">
+                        <h3>2008</h3>
+                        <div class="detail">
+                            <h4>Alustyl</h4>
+                            <p>Opérateur machine (OHQ)</p>
+                            <p>7 ans et 3 mois</p>
                             <p>Préparation fiche de fabrication, débiter, usiner, fabriquer, travailler sur un centre
                                 d'usinage,
                                 pose et accompagnement d’une équipe</p>
                         </div>
                     </div>
+                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="vide" id="vide"></div>
                 </div>
-            </div>
-        </div>
-        <!-- Formation et Diplôme -->
-        <th>FORMATIONS ET DIPLÔMES</th>
-
-        <div class="form_dip">
-            <div class="formation" id="formation">
-                <div class="description">
-                    <div class="cci">
-                        <h3>2020</h3>
-                        <h4>CCI Formation</h4>
-                        <p>Developpeur Web et application Mobile</p>
-                    </div>
-                    <div class="cnam">
-                        <h4>CNAM, Nouméa</h4>
-                        <p>2ème année – Certificat professionnel Technicien de maintenance micro-réseaux et internet
-                            spécialisation cybersécurité des PME</p>
-                    </div>
-                </div>
-                <div class="description">
-                    <div class="bac">
-                        <h3>2004</h3>
-                        <h4>Lycée Pétro Attiti, Nouméa</h4>
-                        <p>Baccalauréat Professionnel Construction Aménagement Bâtiment</p>
-                    </div>
-                </div>
-
-                <div class="description">
-                    <div class="bep_cap">
-                        <h3>2002</h3>
-                        <h4>Lycée Pétro Attiti, Nouméa</h4>
-                        <p>BEP Bois & Matériaux associés / CAP Menuiserie</p>
+                <!-- 2007 -->
+                <div class="cvf">
+                    <div class="vide" id="vide"></div>
+                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="description">
+                        <h3>2007</h3>
+                        <div class="alConcept">
+                            <div class="detail">
+                                <h4>Aluminium Concept</h4>
+                                <p>Opérateur machine</p>
+                                <p>1 ans et 5 mois</p>
+                                <p>Préparation fiche de fabrication, débiter, usiner, fabriquer, travailler sur un
+                                    centre
+                                    d'usinage,
+                                    pose et accompagnement d’une équipe</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Formation et Diplôme -->
+            <th>FORMATIONS ET DIPLÔMES</th>
 
-        </div>
-        <!-- Compétences -->
-        <div class="comp">
-        </div>
-        <!-- Divers -->
-        <div class="divers">
-        </div>
-    </div>
-    <script>
-        window.onscroll = function () {
-            myFunction()
-        };
+            <div class="form_dip">
+                <div class="formation" id="formation">
+                    <div class="description">
+                        <div class="cci">
+                            <h3>2020</h3>
+                            <h4>CCI Formation</h4>
+                            <p>Developpeur Web et application Mobile</p>
+                        </div>
+                        <div class="cnam">
+                            <h4>CNAM, Nouméa</h4>
+                            <p>2ème année – Certificat professionnel Technicien de maintenance micro-réseaux et internet
+                                spécialisation cybersécurité des PME</p>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="bac">
+                            <h3>2004</h3>
+                            <h4>Lycée Pétro Attiti, Nouméa</h4>
+                            <p>Baccalauréat Professionnel Construction Aménagement Bâtiment</p>
+                        </div>
+                    </div>
 
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+                    <div class="description">
+                        <div class="bep_cap">
+                            <h3>2002</h3>
+                            <h4>Lycée Pétro Attiti, Nouméa</h4>
+                            <p>BEP Bois & Matériaux associés / CAP Menuiserie</p>
+                        </div>
+                    </div>
+                </div>
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
+            </div>
+            <!-- Compétences -->
+            <div class="comp">
+            </div>
+            <!-- Divers -->
+            <div class="divers">
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+        <script>
+            window.onscroll = function () {
+                myFunction()
+            };
+
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
             }
-        }
 
 
-        $(".dateShowJs").click(function () {
-            $(".dateShowJsHidden").toggle("slow");
-        });        
-    </script>
-    <script type="text/javascript">
-        window.onload = date_heure('date_heure');
-    </script>
+            $(".dateShowJs").click(function () {
+                $(".dateShowJsHidden").toggle("slow");
+                $(".dateShowJs").hide();
+                $(".deletteCards").show();
+            });
+            $(".deletteCards").click(function () {
+                $(".dateShowJsHidden").toggle("slow");
+                $(".deletteCards").hide();
+                $(".dateShowJs").show();
+            });
+
+            // $(".displayAnim").click(function () {
+            //     $(".dateShowJs").toggle("slow");
+            //     $(".dateShowJs").show();
+            // });
+
+            $(document).ready(function () {
+                $(".play-animation").click(function () {
+                    $(".animated").css("animation-play-state", "running");
+                });
+                $(".stop-animation").click(function () {
+                    $(".animated").css("animation-play-state", "paused");
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            window.onload = date_heure('date_heure');
+        </script>
 </body>
 
 </html>
