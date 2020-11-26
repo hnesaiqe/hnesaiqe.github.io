@@ -224,8 +224,9 @@
                 <!-- 2008 -->
                 <div class="alustyl">
                     <div class="description descriptionGauche">
-                        <h3>2008</h3>
-                        <div class="detail">
+                        <h3 class="dateShowJs2008">2008</h3>
+                        <button style="display: none; text-align: center;" class="deletteCards2008">X</button>
+                        <div class="detail dateShowJsHidden2008">
                             <h4>Alustyl</h4>
                             <p>Opérateur machine (OHQ)</p>
                             <p>7 ans et 3 mois</p>
@@ -339,6 +340,32 @@
                 $(".dateShowJsHidden2015").toggle("slow");
                 $(".deletteCards2015").hide();
                 $(".dateShowJs2015").show();
+                $(".displayAnim").css("animation-play-state", "running");
+            });
+
+            $(".dateShowJs2008").click(function () {
+                $(".dateShowJsHidden2008").toggle("slow");
+                $(".dateShowJs2008").hide();
+                $(".deletteCards2008").show();
+                $(".displayAnim").css("animation-play-state", "paused");
+            });
+            $(".deletteCards2008").click(function () {
+                $(".dateShowJsHidden2008").toggle("slow");
+                $(".deletteCards2008").hide();
+                $(".dateShowJs2008").show();
+                $(".displayAnim").css("animation-play-state", "running");
+            });
+
+            $(".dateShowJs2007").click(function () {
+                $(".dateShowJsHidden2007").toggle("slow");
+                $(".dateShowJs2007").hide();
+                $(".deletteCards2007").show();
+                $(".displayAnim").css("animation-play-state", "paused");
+            });
+            $(".deletteCards2007").click(function () {
+                $(".dateShowJsHidden2007").toggle("slow");
+                $(".deletteCards2007").hide();
+                $(".dateShowJs2007").show();
                 $(".displayAnim").css("animation-play-state", "running");
             });
 
