@@ -14,6 +14,19 @@
 </head>
 
 <style>
+    .buttonDate {
+        font-size: xxx-large;
+    }
+
+    .titleFormation {
+        text-align: right;
+        border-top: 2px solid gray;
+    }
+
+    .form_dip {
+        text-align: -webkit-center;
+    }
+
     .displayAnim {
         animation: taileDate 1s infinite;
     }
@@ -179,7 +192,7 @@
                     <div class="description descriptionGauche">
                         <div class="formAlter">
                             <div>
-                                <h3 class="dateShowJs2020 displayAnim">2020</h3>
+                                <button class="dateShowJs2020 displayAnim buttonDate">2020</button>
                                 <button style="display: none; text-align: center;" class="deletteCards">X</button>
                             </div>
                             <div class="detail dateShowJsHidden">
@@ -201,15 +214,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="vide_middle vide_middle2020" id="vide_middle"></div>
                     <div class="vide" id="vide"></div>
                 </div>
                 <!-- 2015 -->
                 <div class="garonne">
                     <div class="vide" id="vide"></div>
-                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="vide_middle vide_middle2015" id="vide_middle" style="text-align: right;"></div>
                     <div class="description descriptionDroite">
-                        <h3 class="dateShowJs2015 ">2015</h3>
+                        <button class="dateShowJs2015 buttonDate">2015</button>
                         <button style="display: none; text-align: center;" class="deletteCards2015">X</button>
                         <div class="displayAnim2015">
                             <div class="detail dateShowJsHidden2015">
@@ -224,9 +237,8 @@
                 <!-- 2008 -->
                 <div class="alustyl">
                     <div class="description descriptionGauche">
-                        <h3 class="dateShowJs2008">2008</h3>
+                        <button class="dateShowJs2008 buttonDate">2008</button>
                         <button style="display: none; text-align: center;" class="deletteCards2008">X</button>
-                        <div class="displayAnim2008"></div>
                         <div class="detail dateShowJsHidden2008">
                             <h4>Alustyl</h4>
                             <p>Opérateur machine (OHQ)</p>
@@ -236,17 +248,19 @@
                                 pose et accompagnement d’une équipe</p>
                         </div>
                     </div>
-                    <div class="vide_middle" id="vide_middle">trait</div>
+                    <div class="vide_middle vide_middle2008" id="vide_middle"></div>
                     <div class="vide" id="vide"></div>
                 </div>
                 <!-- 2007 -->
                 <div class="cvf">
                     <div class="vide" id="vide"></div>
-                    <div class="vide_middle" id="vide_middle">trait</div>
-                    <div class="description descriptionDroite">
-                        <h3>2007</h3>
+                    <div class="vide_middle vide_middle2007" id="vide_middle"
+                        style="text-align: right;border-bottom: 0;"></div>
+                    <div class="description descriptionDroite description2007">
+                        <button class="dateShowJs2007 buttonDate">2007</button>
+                        <button style="display: none; text-align: center;" class="deletteCards2007">X</button>
                         <div class="alConcept">
-                            <div class="detail">
+                            <div class="detail dateShowJsHidden2007">
                                 <h4>Aluminium Concept</h4>
                                 <p>Opérateur machine</p>
                                 <p>1 ans et 5 mois</p>
@@ -260,7 +274,7 @@
                 </div>
             </div>
             <!-- Formation et Diplôme -->
-            <h2>FORMATIONS ET DIPLÔMES</h2>
+            <h2 class="titleFormation">FORMATIONS ET DIPLÔMES</h2>
 
             <div class="form_dip">
                 <div class="formation" id="formation">
@@ -323,11 +337,13 @@
                 $(".dateShowJsHidden").toggle("slow");
                 $(".dateShowJs2020").hide();
                 $(".deletteCards").show();
+                $(".vide_middle2020").append("2020");
             });
             $(".deletteCards").click(function () {
                 $(".dateShowJsHidden").toggle("slow");
                 $(".deletteCards").hide();
                 $(".dateShowJs2020").show();
+                $(".vide_middle2020").empty();
             });
 
 
@@ -336,12 +352,14 @@
                 $(".dateShowJs2015").hide();
                 $(".deletteCards2015").show();
                 $(".displayAnim").css("animation-play-state", "paused");
+                $(".vide_middle2015").append("2015");
             });
             $(".deletteCards2015").click(function () {
                 $(".dateShowJsHidden2015").toggle("slow");
                 $(".deletteCards2015").hide();
                 $(".dateShowJs2015").show();
                 $(".displayAnim").css("animation-play-state", "running");
+                $(".vide_middle2015").empty();
             });
 
             $(".dateShowJs2008").click(function () {
@@ -349,12 +367,14 @@
                 $(".dateShowJs2008").hide();
                 $(".deletteCards2008").show();
                 $(".displayAnim").css("animation-play-state", "paused");
+                $(".vide_middle2008").append("2008");
             });
             $(".deletteCards2008").click(function () {
                 $(".dateShowJsHidden2008").toggle("slow");
                 $(".deletteCards2008").hide();
                 $(".dateShowJs2008").show();
                 $(".displayAnim").css("animation-play-state", "running");
+                $(".vide_middle2008").empty();
             });
 
             $(".dateShowJs2007").click(function () {
@@ -362,12 +382,14 @@
                 $(".dateShowJs2007").hide();
                 $(".deletteCards2007").show();
                 $(".displayAnim").css("animation-play-state", "paused");
+                $(".vide_middle2007").append("2007");
             });
             $(".deletteCards2007").click(function () {
                 $(".dateShowJsHidden2007").toggle("slow");
                 $(".deletteCards2007").hide();
                 $(".dateShowJs2007").show();
                 $(".displayAnim").css("animation-play-state", "running");
+                $(".vide_middle2007").empty();
             });
 
 
